@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PSH Poster – Guthrie Research Day 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+
+@page {
+  size: 36in 24in;
+  margin: 0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #0D2B4E;
+  --blue:   #1A5276;
+  --teal:   #1A7E8E;
+  --gold:   #C8932A;
+  --silver: #E8EEF4;
+  --light:  #F4F7FA;
+  --white:  #FFFFFF;
+  --text:   #1A1A2E;
+  --muted:  #4A5568;
+  --rule:   #CBD5E0;
+}
+
+html, body {
+  width: 36in;
+  height: 24in;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+.poster {
+  width: 36in;
+  height: 24in;
+  display: flex;
+  flex-direction: column;
+  background: var(--light);
+  overflow: hidden;
+  font-family: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ── HEADER ── */
+.header {
+  background: var(--navy);
+  color: #fff;
+  padding: 0.3in 0.5in 0.28in;
+  display: flex;
+  align-items: center;
+  gap: 0.35in;
+  border-bottom: 0.07in solid var(--gold);
+  flex-shrink: 0;
+}
+
+.logo-badge {
+  width: 1.1in;
+  height: 1.1in;
+  border-radius: 50%;
+  background: #fff;
+  border: 0.04in solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.13in;
+  font-weight: 700;
+  color: var(--navy);
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+
+.header-text { flex: 1; }
+
+.header-category {
+  font-size: 0.16in;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.05in;
+}
+
+.header-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 0.45in;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 0.08in;
+}
+
+.header-subtitle {
+  font-size: 0.18in;
+  font-weight: 300;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.35;
+}
+
+.header-meta {
+  margin-top: 0.1in;
+  font-size: 0.155in;
+  color: rgba(255,255,255,0.72);
+  border-top: 0.007in solid rgba(255,255,255,0.25);
+  padding-top: 0.08in;
+  line-height: 1.45;
+}
+.header-meta strong { color: #fff; font-weight: 600; }
+
+.header-right {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1in;
+  min-width: 2.4in;
+  text-align: right;
+}
+
+.conf-badge {
+  background: rgba(255,255,255,0.08);
+  border: 0.006in solid rgba(255,255,255,0.22);
+  border-radius: 0.07in;
+  padding: 0.1in 0.15in;
+  font-size: 0.15in;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.4;
+  text-align: right;
+}
+.conf-badge strong { color: var(--gold); display: block; font-size: 0.17in; }
+
+/* ── BODY ── */
+.body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 7.2in 1fr 1fr 7.2in;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.18in;
+  padding: 0.2in 0.28in;
+  column-gap: 0.2in;
+  row-gap: 0.16in;
+  min-height: 0;
+}
+
+/* ── PANEL ── */
+.panel {
+  background: var(--white);
+  border-radius: 0.09in;
+  padding: 0.22in 0.24in;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1in;
+  box-shadow: 0 0.01in 0.08in rgba(13,43,78,0.10);
+  border-top: 0.04in solid var(--teal);
+  overflow: hidden;
+}
+.panel.gold  { border-top-color: var(--gold); }
+.panel.navy  { border-top-color: var(--navy); }
+.panel.blue  { border-top-color: var(--blue); }
+.panel.teal  { border-top-color: var(--teal); }
+.panel.tall  { grid-row: span 2; }
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.1in;
+  border-bottom: 0.007in solid var(--rule);
+  padding-bottom: 0.09in;
+  flex-shrink: 0;
+}
+
+.panel-title {
+  font-family: 'Merriweather', serif;
+  font-size: 0.195in;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.panel-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.08in;
+  overflow: hidden;
+}
+
+p  { font-size: 0.155in; line-height: 1.5; color: var(--text); }
+ul { padding-left: 0.17in; }
+li { font-size: 0.152in; line-height: 1.45; color: var(--text); margin-bottom: 0.035in; }
+li::marker { color: var(--teal); }
+strong { color: var(--navy); font-weight: 700; }
+
+.label {
+  display: inline-block;
+  font-size: 0.1in;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--teal);
+  border-radius: 0.03in;
+  padding: 0.015in 0.07in;
+  margin-right: 0.05in;
+}
+.label.gold  { background: var(--gold); }
+.label.navy  { background: var(--navy); }
+
+/* ── STAT GRID ── */
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.09in;
+  flex-shrink: 0;
+}
+.stat-box {
+  background: var(--silver);
+  border-radius: 0.07in;
+  padding: 0.1in 0.12in;
+  text-align: center;
+  border-left: 0.04in solid var(--teal);
+}
+.stat-box.g { border-left-color: var(--gold); }
+.stat-box.b { border-left-color: var(--blue); }
+.stat-box.n { border-left-color: var(--navy); }
+.stat-val {
+  font-family: 'Merriweather', serif;
+  font-size: 0.26in;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+.stat-lbl { font-size: 0.12in; color: var(--muted); margin-top: 0.03in; line-height: 1.3; }
+
+/* ── PHASE LIST ── */
+.phase-list { display: flex; flex-direction: column; gap: 0.08in; }
+.phase-item { display: flex; gap: 0.1in; align-items: flex-start; }
+.phase-dot {
+  width: 0.28in;
+  height: 0.28in;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.13in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.015in;
+}
+.phase-dot.t { background: var(--teal); }
+.phase-dot.g { background: var(--gold); }
+.phase-dot.b { background: var(--blue); }
+.phase-title { font-size: 0.15in; font-weight: 700; color: var(--navy); line-height: 1.2; }
+.phase-desc  { font-size: 0.138in; color: var(--muted); line-height: 1.4; margin-top: 0.015in; }
+
+/* ── COMP CARDS ── */
+.comp-cards { display: flex; flex-direction: column; gap: 0.07in; }
+.comp-card {
+  display: flex;
+  align-items: center;
+  gap: 0.1in;
+  background: var(--silver);
+  border-radius: 0.06in;
+  padding: 0.08in 0.1in;
+}
+.comp-name { font-size: 0.148in; font-weight: 700; color: var(--navy); }
+.comp-desc { font-size: 0.13in; color: var(--muted); margin-top: 0.01in; line-height: 1.35; }
+
+/* ── OUTCOME BARS ── */
+.outcome-list { display: flex; flex-direction: column; gap: 0.09in; }
+.outcome-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.03in; }
+.outcome-label { font-size: 0.148in; font-weight: 600; color: var(--navy); }
+.outcome-val   { font-size: 0.148in; font-weight: 700; color: var(--teal); }
+.bar-track { background: var(--silver); border-radius: 0.05in; height: 0.09in; overflow: hidden; }
+.bar-fill  { height: 100%; border-radius: 0.05in; background: linear-gradient(90deg, var(--teal), var(--blue)); }
+.outcome-note { font-size: 0.12in; color: var(--muted); margin-top: 0.025in; line-height: 1.3; }
+
+.divider { height: 0.007in; background: var(--rule); border-radius: 0.01in; flex-shrink: 0; }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.62);
+  font-size: 0.125in;
+  padding: 0.09in 0.35in;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  border-top: 0.04in solid var(--gold);
+}
+.footer strong { color: #fff; }
+
+/* ── ACADEMIC ENRICHMENT GRID ── */
+.acad-grid {
+  display: flex;
+  gap: 0.08in;
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
+}
+.acad-col {
+  flex: 1;
+  border-radius: 0.07in;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 0.007in solid rgba(0,0,0,0.12);
+  min-height: 0;
+}
+.acad-col-header {
+  padding: 0.07in 0.1in;
+  font-size: 0.13in;
+  font-weight: 700;
+  color: white;
+  font-family: 'Source Sans 3', sans-serif;
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+}
+.acad-col-body {
+  flex: 1;
+  padding: 0.08in 0.1in;
+  display: flex;
+  flex-direction: column;
+  gap: 0.04in;
+}
+.acad-col-body li {
+  font-size: 0.128in;
+  line-height: 1.35;
+  color: var(--text);
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0.12in;
+  text-indent: -0.12in;
+}
+.acad-col-body li::before {
+  content: "•";
+  margin-right: 0.05in;
+  font-size: 0.11in;
+}
+.acad-col.c1 .acad-col-header { background: var(--navy); }
+.acad-col.c1 .acad-col-body   { background: rgba(13,43,78,0.06); }
+.acad-col.c1 .acad-col-body li::before { color: var(--navy); }
+.acad-col.c2 .acad-col-header { background: var(--teal); }
+.acad-col.c2 .acad-col-body   { background: rgba(26,126,142,0.06); }
+.acad-col.c2 .acad-col-body li::before { color: var(--teal); }
+.acad-col.c3 .acad-col-header { background: var(--gold); }
+.acad-col.c3 .acad-col-body   { background: rgba(200,147,42,0.07); }
+.acad-col.c3 .acad-col-body li::before { color: var(--gold); }
+.acad-callout {
+  margin-top: 0.07in;
+  background: rgba(13,43,78,0.08);
+  border-radius: 0.06in;
+  border: 0.007in solid rgba(13,43,78,0.15);
+  padding: 0.07in 0.12in;
+  font-size: 0.128in;
+  font-weight: 700;
+  color: var(--navy);
+  text-align: center;
+  flex-shrink: 0;
+}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo-badge">GUTHRIE<br>LOURDES<br>HOSPITAL</div>
+
+    <div class="header-text">
+      <div class="header-category">Quality Improvement Initiative</div>
+      <div class="header-title">A Perioperative Surgical Home for Orthopedic Surgery at Guthrie Lourdes Hospital</div>
+      <div class="header-subtitle">A Physician-Led QI Framework for Preoperative Optimization, Coordinated Recovery, and Outcomes-Driven Surgical Care</div>
+      <div class="header-meta">
+        <strong>David Comstock, MD</strong> — PGY-3 Internal Medicine &nbsp;|&nbsp;
+        Orthopedic Surgery Collaborators: Seybold E, Reynolds D, Van Gorder T, Wilson M, McClure M, Al Saied MA, Van Gorder RT, Issa K<br>
+        <strong>Guthrie Lourdes Hospital</strong>, Internal Medicine Residency Program &nbsp;·&nbsp; Binghamton, New York
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="conf-badge">
+        <strong>Guthrie Research Day 2026</strong>
+        April 24, 2026 &nbsp;·&nbsp; QI Poster Symposium
+      </div>
+      <div class="conf-badge" style="font-size:0.135in;">
+        Presented in support of the<br>
+        <strong style="color:#fff; font-size:0.15in;">Guthrie Lourdes Ambulatory<br>Surgery Center — Now Operational</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- COL 1, rows 1-2: Background -->
+    <div class="panel navy tall">
+      <div class="panel-header">
+        <div class="panel-title">Background &amp; Problem Statement</div>
+      </div>
+      <div class="panel-body">
+        <p>Guthrie Lourdes Hospital's new <strong>Ambulatory Surgery Center (ASC)</strong> joins an established perioperative infrastructure that includes the <strong>Joint Academy</strong> — a system-wide structured joint replacement education program with procedure-specific patient workbooks. This is a strong institutional foundation with significant opportunity for enhancement.</p>
+        <p>The current pathway, however, operates through fragmented entry points: Joint Education classes are initiated by Central Scheduling 3–6 weeks pre-operatively; pre-admission testing and medical clearance are coordinated through individual orthopedic offices 2–3 weeks before surgery — leaving insufficient time for meaningful optimization. Medication protocols vary by surgeon. PT/OT arrangements are deferred to the day of discharge. Patient-reported gaps include erroneous medication hold instructions and incorrect arrival times, reflecting a system without a unifying coordinating throughline.</p>
+        <div class="divider"></div>
+        <p style="font-weight:700; color:var(--navy); font-size:0.16in;">Scale of the Problem — Orthopedic Surgery:</p>
+        <div class="stat-grid">
+          <div class="stat-box n">
+            <div class="stat-val">7–15%</div>
+            <div class="stat-lbl">Postoperative complication rate<br><span style="font-size:0.1in; color:#718096;">elective surgery — national estimates</span></div>
+          </div>
+          <div class="stat-box g">
+            <div class="stat-val">$19,600</div>
+            <div class="stat-lbl">Average added cost per complication<br><span style="font-size:0.1in; color:#718096;">Healy et al., JAMA Surgery 2016</span></div>
+          </div>
+          <div class="stat-box b">
+            <div class="stat-val">7–10%</div>
+            <div class="stat-lbl">90-day complication rate<br><span style="font-size:0.1in; color:#718096;">primary THA/TKA</span></div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val">~3,600</div>
+            <div class="stat-lbl">Annual orthopedic volume<br><span style="font-size:0.1in; color:#718096;">projected at Guthrie ASC</span></div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <p><span class="label navy">Opportunity</span> A structured <strong>Perioperative Surgical Home (PSH)</strong> — an evidence-based, physician-led model endorsed by the American Society of Anesthesiologists (ASA) and aligned with American College of Surgeons perioperative quality initiatives — addresses these gaps by extending and systematizing the existing Joint Academy infrastructure: adding a unified referral entry point, a 6–8 week optimization window, navigator-led continuity, and standardized patient communication from surgical decision through PCP handoff.</p>
+        <p><span class="label gold">Target Population</span> Orthopedic patients <strong>age ≥55</strong> undergoing elective THA, TKA, or related procedures at the Guthrie Lourdes ASC. This cohort carries the highest comorbidity burden and greatest potential for structured optimization.</p>
+        <!-- Projected Cost Impact Chart -->
+        <svg viewBox="0 0 480 310" width="100%" xmlns="http://www.w3.org/2000/svg" style="margin-top:0.06in; flex-shrink:0;">
+          <text x="240" y="16" text-anchor="middle" fill="#0D2B4E" font-size="13" font-weight="700" font-family="sans-serif">Projected Annual Financial Impact of PSH</text>
+          <text x="240" y="29" text-anchor="middle" fill="#4A5568" font-size="9.5" font-family="sans-serif" font-style="italic">At projected ASC volume of ~3,600 orthopedic cases/year</text>
+
+          <!-- Grid lines x-axis: 148=0, 228=$1M, 308=$2M, 388=$3M -->
+          <line x1="148" y1="38" x2="148" y2="228" stroke="#E8EEF4" stroke-width="1.5"/>
+          <line x1="228" y1="38" x2="228" y2="228" stroke="#E8EEF4" stroke-width="1.5"/>
+          <line x1="308" y1="38" x2="308" y2="228" stroke="#E8EEF4" stroke-width="1.5"/>
+          <line x1="388" y1="38" x2="388" y2="228" stroke="#E8EEF4" stroke-width="1.5"/>
+          <line x1="468" y1="38" x2="468" y2="228" stroke="#E8EEF4" stroke-width="1.5"/>
+          <text x="148" y="240" text-anchor="middle" fill="#4A5568" font-size="10" font-family="sans-serif">$0</text>
+          <text x="228" y="240" text-anchor="middle" fill="#4A5568" font-size="10" font-family="sans-serif">$1M</text>
+          <text x="308" y="240" text-anchor="middle" fill="#4A5568" font-size="10" font-family="sans-serif">$2M</text>
+          <text x="388" y="240" text-anchor="middle" fill="#4A5568" font-size="10" font-family="sans-serif">$3M</text>
+          <text x="468" y="240" text-anchor="middle" fill="#4A5568" font-size="10" font-family="sans-serif">$4M</text>
+
+          <!-- Bar 1: Complication reduction — y 38–64 -->
+          <text x="142" y="52" text-anchor="end" fill="#0D2B4E" font-size="10.5" font-weight="700" font-family="sans-serif">Complication</text>
+          <text x="142" y="64" text-anchor="end" fill="#0D2B4E" font-size="10.5" font-weight="700" font-family="sans-serif">Reduction</text>
+          <rect x="148" y="41" width="168" height="24" rx="5" fill="#0D2B4E"/>
+          <rect x="148" y="41" width="280" height="24" rx="5" fill="none" stroke="#0D2B4E" stroke-width="1.2" stroke-dasharray="5,3" opacity="0.45"/>
+          <text x="152" y="57" fill="white" font-size="10.5" font-weight="700" font-family="sans-serif">$2.1M</text>
+          <text x="475" y="57" text-anchor="end" fill="#C8932A" font-size="10.5" font-weight="700" font-family="sans-serif">→ $3.5M</text>
+          <text x="148" y="77" fill="#4A5568" font-size="9" font-family="sans-serif">~108–180 complications averted × $19,600/complication</text>
+          <text x="148" y="89" fill="#4A5568" font-size="9" font-family="sans-serif">Healy MA et al., JAMA Surgery 2016;151(9):823–830</text>
+
+          <!-- Bar 2: LOS reduction — y 100–124 -->
+          <text x="142" y="111" text-anchor="end" fill="#1A5276" font-size="10.5" font-weight="700" font-family="sans-serif">LOS</text>
+          <text x="142" y="123" text-anchor="end" fill="#1A5276" font-size="10.5" font-weight="700" font-family="sans-serif">Reduction</text>
+          <rect x="148" y="98" width="86" height="24" rx="5" fill="#1A5276"/>
+          <rect x="148" y="98" width="216" height="24" rx="5" fill="none" stroke="#1A5276" stroke-width="1.2" stroke-dasharray="5,3" opacity="0.45"/>
+          <text x="152" y="114" fill="white" font-size="10.5" font-weight="700" font-family="sans-serif">$1.08M</text>
+          <text x="366" y="114" fill="#C8932A" font-size="10.5" font-weight="700" font-family="sans-serif">→ $2.7M</text>
+          <text x="148" y="134" fill="#4A5568" font-size="9" font-family="sans-serif">0.3-day mean LOS reduction × 3,600 cases/yr</text>
+          <text x="148" y="146" fill="#4A5568" font-size="9" font-family="sans-serif">× $1,000–$2,500/patient-day in direct hospital costs</text>
+
+          <!-- Bar 3: Cancellation reduction — y 158–182 -->
+          <text x="142" y="166" text-anchor="end" fill="#1A7E8E" font-size="10.5" font-weight="700" font-family="sans-serif">Cancellation</text>
+          <text x="142" y="178" text-anchor="end" fill="#1A7E8E" font-size="10.5" font-weight="700" font-family="sans-serif">Reduction</text>
+          <rect x="148" y="155" width="7" height="24" rx="3" fill="#1A7E8E"/>
+          <rect x="148" y="155" width="14" height="24" rx="3" fill="none" stroke="#1A7E8E" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.45"/>
+          <text x="163" y="171" fill="#1A7E8E" font-size="10.5" font-weight="700" font-family="sans-serif">$90K – $180K</text>
+          <text x="148" y="191" fill="#4A5568" font-size="9" font-family="sans-serif">~36 cases/yr recaptured; OR time, staffing,</text>
+          <text x="148" y="203" fill="#4A5568" font-size="9" font-family="sans-serif">and resource inefficiency avoided</text>
+
+          <!-- Total callout -->
+          <rect x="60" y="250" width="360" height="32" rx="7" fill="#0D2B4E"/>
+          <text x="240" y="263" text-anchor="middle" fill="white" font-size="10.5" font-weight="700" font-family="sans-serif">Estimated Combined Annual Impact:</text>
+          <text x="240" y="278" text-anchor="middle" fill="#C8932A" font-size="14" font-weight="700" font-family="sans-serif">$3.3M – $6.4M</text>
+        </svg>
+
+        <div class="divider"></div>
+        <p style="font-weight:700; color:var(--navy); font-size:0.155in; flex-shrink:0;">Comorbidity Burden — US Adults Age ≥55 (Target Population)</p>
+        <svg viewBox="0 0 420 200" width="100%" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+          <!-- Prevalence bars — descending by US adult ≥55 prevalence (CDC/NHANES) -->
+          <!-- Labels -->
+          <text x="130" y="22"  text-anchor="end" fill="#0D2B4E" font-size="10" font-weight="700" font-family="sans-serif">Hypertension</text>
+          <text x="130" y="40"  text-anchor="end" fill="#0D2B4E" font-size="10" font-weight="700" font-family="sans-serif">Obesity (BMI ≥30)</text>
+          <text x="130" y="58"  text-anchor="end" fill="#0D2B4E" font-size="10" font-weight="700" font-family="sans-serif">OSA (screened)</text>
+          <text x="130" y="76"  text-anchor="end" fill="#0D2B4E" font-size="10" font-weight="700" font-family="sans-serif">CAD / CVD</text>
+          <text x="130" y="94"  text-anchor="end" fill="#0D2B4E" font-size="10" font-weight="700" font-family="sans-serif">CKD</text>
+          <text x="130" y="112"  text-anchor="end" fill="#0D2B4E" font-size="10" font-weight="700" font-family="sans-serif">Diabetes Mellitus</text>
+          <text x="130" y="130"  text-anchor="end" fill="#0D2B4E" font-size="10" font-weight="700" font-family="sans-serif">Frailty† (CFS ≥4)</text>
+          <text x="130" y="148"  text-anchor="end" fill="#0D2B4E" font-size="10" font-weight="700" font-family="sans-serif">Cognitive Impairment</text>
+          <text x="130" y="166"  text-anchor="end" fill="#0D2B4E" font-size="10" font-weight="700" font-family="sans-serif">COPD</text>
+
+          <!-- Bars -->
+          <rect x="134" y="10"  width="245" height="14" rx="4" fill="#0D2B4E" opacity="0.80"/><text x="383" y="22"  fill="#0D2B4E" font-size="9.5" font-weight="700" font-family="sans-serif"> ~70%</text>
+          <rect x="134" y="28"  width="147" height="14" rx="4" fill="#1A5276" opacity="0.80"/><text x="285" y="40"  fill="#1A5276" font-size="9.5" font-weight="700" font-family="sans-serif"> ~42%</text>
+          <rect x="134" y="46"  width="130" height="14" rx="4" fill="#1A7E8E" opacity="0.80"/><text x="268" y="58"  fill="#1A7E8E" font-size="9.5" font-weight="700" font-family="sans-serif"> ~37%</text>
+          <rect x="134" y="64"  width="94" height="14" rx="4" fill="#1A7E8E" opacity="0.65"/><text x="232" y="76"  fill="#1A7E8E" font-size="9.5" font-weight="700" font-family="sans-serif"> ~27%</text>
+          <rect x="134" y="82"  width="88" height="14" rx="4" fill="#C8932A" opacity="0.80"/><text x="226" y="94"  fill="#C8932A" font-size="9.5" font-weight="700" font-family="sans-serif"> ~25%</text>
+          <rect x="134" y="100"  width="77" height="14" rx="4" fill="#C8932A" opacity="0.65"/><text x="215" y="112"  fill="#C8932A" font-size="9.5" font-weight="700" font-family="sans-serif"> ~22%</text>
+          <rect x="134" y="118"  width="60" height="14" rx="4" fill="#7B1C1C" opacity="0.60"/><text x="198" y="130"  fill="#7B1C1C" font-size="9.5" font-weight="700" font-family="sans-serif"> ~17%</text>
+          <rect x="134" y="136"  width="56" height="14" rx="4" fill="#7B1C1C" opacity="0.50"/><text x="194" y="148"  fill="#7B1C1C" font-size="9.5" font-weight="700" font-family="sans-serif"> ~16%</text>
+          <rect x="134" y="154"  width="52" height="14" rx="4" fill="#4A5568" opacity="0.50"/><text x="190" y="166"  fill="#4A5568" font-size="9.5" font-weight="700" font-family="sans-serif"> ~15%</text>
+
+          <text x="210" y="183" text-anchor="middle" fill="#4A5568" font-size="8.5" font-family="sans-serif" font-style="italic">Approximate prevalence, US adults age ≥55 (CDC/NHANES).</text>
+          <text x="210" y="196" text-anchor="middle" fill="#4A5568" font-size="8.5" font-family="sans-serif" font-style="italic">†CFS ≥4 shown; PSH prehabilitation threshold: CFS ≥5.</text>
+        </svg>
+
+        <div class="divider"></div>
+        <p style="font-weight:700; color:var(--navy); font-size:0.155in; flex-shrink:0;">Academic Enrichment</p>
+        <div class="acad-grid">
+          <div class="acad-col c1">
+            <div class="acad-col-header">QI Projects</div>
+            <ul class="acad-col-body">
+              <li>Outcome tracking vs. baseline</li>
+              <li>Protocol adherence audits</li>
+              <li>Complication root-cause review</li>
+              <li>Epic dashboard build</li>
+              <li>Quarterly leadership reporting</li>
+              <li>Annual program review</li>
+              <li>Resident-led data collection</li>
+              <li>M&amp;M integration</li>
+            </ul>
+          </div>
+          <div class="acad-col c2">
+            <div class="acad-col-header">Research</div>
+            <ul class="acad-col-body">
+              <li>Pre/post outcomes analysis</li>
+              <li>Three-group comparator study</li>
+              <li>Periop risk prediction models</li>
+              <li>Population-based cohort</li>
+              <li>Cost-effectiveness analysis</li>
+              <li>Frailty &amp; outcome correlation</li>
+              <li>Medical student mentorship</li>
+              <li>Cross-disciplinary collaboration</li>
+            </ul>
+          </div>
+          <div class="acad-col c3">
+            <div class="acad-col-header">Dissemination</div>
+            <ul class="acad-col-body">
+              <li>Guthrie Research Day</li>
+              <li>Regional conference abstracts</li>
+              <li>National surgical meetings</li>
+              <li>Poster &amp; oral presentations</li>
+              <li>Peer-reviewed publication</li>
+              <li>Guthrie Journal of Medicine</li>
+              <li>Morning report presentations</li>
+              <li>Grand Rounds opportunities</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acad-callout">Positions Guthrie Lourdes as a regional leader in academic perioperative medicine.</div>
+      </div>
+    </div>
+
+    <!-- COL 2, row 1: PSH Model -->
+    <div class="panel teal">
+      <div class="panel-header">
+        <div class="panel-title">The PSH Model: Three-Phase Framework</div>
+      </div>
+      <div class="panel-body">
+        <div class="phase-list">
+          <div class="phase-item">
+            <div class="phase-dot">1</div>
+            <div>
+              <div class="phase-title">Preoperative Optimization Clinic (6–8 wks pre-op)</div>
+              <div class="phase-desc">Structured intake using validated tools: STOP-BANG ≥3, RCRI, Clinical Frailty Scale. Targets glycemic control (HbA1c &lt;8.5%), anemia correction, OSA management, polypharmacy review, nutritional screening (MNA-SF), PT/OT functional baseline evaluation (mobility, strength, and ADL assessment to anchor discharge planning and outcome tracking), and cardiac risk stratification per 2024 ACC/AHA stepwise algorithm (DASI → NT-proBNP → judicious stress testing). Anticoagulant/antiplatelet hold protocols and TXA eligibility screening initiated. The 6–8 week window enables optimization not achievable within the current 2–3 week pre-admission testing timeline.</div>
+            </div>
+          </div>
+          <div class="phase-item">
+            <div class="phase-dot t">2</div>
+            <div>
+              <div class="phase-title">Intraoperative Coordination</div>
+              <div class="phase-desc">Anesthesia team pre-briefed via the structured preoperative summary note on OSA status, airway flags, anticoagulation plan, and ERAS pathway. Surgical team and PACU/postoperative nursing receive discipline-specific sections of the same note. Surgical-specific checklists embedded in Epic. TXA administered per AAHKS/AAOS/ASRA consensus protocol where not contraindicated.</div>
+            </div>
+          </div>
+          <div class="phase-item">
+            <div class="phase-dot g">3</div>
+            <div>
+              <div class="phase-title">Postoperative Recovery &amp; Reintegration (4–6 wks)</div>
+              <div class="phase-desc">Multimodal, opioid-sparing pain management. Early mobilization and PT/OT protocols. Risk-stratified VTE prophylaxis per 2022 ICM-VTE and AAOS guidelines. CAM delirium screening with HELP protocol components for high-risk patients. Beers Criteria medication review. Coordinated PCP handoff with comprehensive discharge documentation.</div>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <p><span class="label">Evidence Base</span> PSH and ERAS (Enhanced Recovery After Surgery) models in comparable orthopedic programs have demonstrated LOS reductions of <strong>1–3 days</strong> (inpatient orthopedic programs) and up to <strong>48% reduction</strong> in postoperative complication rates versus conventional care (Healy MA et al., JAMA Surgery 2016).</p>
+
+        <!-- Care Continuum Flow Diagram (3-phase + PCP transition) -->
+        <svg viewBox="0 0 720 175" width="100%" xmlns="http://www.w3.org/2000/svg" style="margin-top:0.06in; flex-shrink:0;">
+          <!-- Background track (spans all 3 phases) -->
+          <rect x="0" y="60" width="654" height="4" rx="2" fill="#E8EEF4"/>
+
+          <!-- ── PHASE 1: Pre-Op Clinic ── -->
+          <rect x="0" y="10" width="200" height="100" rx="9" fill="#0D2B4E"/>
+          <text x="100" y="35" text-anchor="middle" fill="#C8932A" font-size="10.5" font-weight="700" font-family="sans-serif" letter-spacing="2">PRE-OP CLINIC</text>
+          <text x="100" y="53" text-anchor="middle" fill="white" font-size="14" font-weight="700" font-family="sans-serif">6&#x2013;8 weeks</text>
+          <text x="100" y="70" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="11" font-family="sans-serif">Optimization &amp; risk stratification</text>
+          <text x="100" y="85" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="11" font-family="sans-serif">PT/OT functional baseline</text>
+          <text x="100" y="100" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="11" font-family="sans-serif">Protocol initiation</text>
+
+          <!-- Arrow 1&#x2192;2 -->
+          <rect x="200" y="58" width="14" height="8" fill="#1A7E8E"/>
+          <polygon points="212,52 226,62 212,72" fill="#1A7E8E"/>
+
+          <!-- ── PHASE 2: Surgery Day ── -->
+          <rect x="226" y="10" width="200" height="100" rx="9" fill="#1A7E8E"/>
+          <text x="326" y="35" text-anchor="middle" fill="#E8EEF4" font-size="10.5" font-weight="700" font-family="sans-serif" letter-spacing="2">SURGERY DAY</text>
+          <text x="326" y="53" text-anchor="middle" fill="white" font-size="14" font-weight="700" font-family="sans-serif">Day of procedure</text>
+          <text x="326" y="70" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="11" font-family="sans-serif">ERAS activation</text>
+          <text x="326" y="85" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="11" font-family="sans-serif">TXA protocol</text>
+          <text x="326" y="100" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="11" font-family="sans-serif">Anesthesia briefing</text>
+
+          <!-- Arrow 2&#x2192;3 -->
+          <rect x="426" y="58" width="14" height="8" fill="#1A5276"/>
+          <polygon points="438,52 452,62 438,72" fill="#1A5276"/>
+
+          <!-- ── PHASE 3: Postoperative Recovery ── -->
+          <rect x="452" y="10" width="202" height="100" rx="9" fill="#1A5276"/>
+          <text x="553" y="33" text-anchor="middle" fill="#C8932A" font-size="10" font-weight="700" font-family="sans-serif" letter-spacing="1.5">POSTOPERATIVE RECOVERY</text>
+          <text x="553" y="50" text-anchor="middle" fill="white" font-size="14" font-weight="700" font-family="sans-serif">4&#x2013;6 weeks</text>
+          <text x="553" y="67" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="11" font-family="sans-serif">Mobilization &amp; PT/OT</text>
+          <text x="553" y="82" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="11" font-family="sans-serif">VTE prophylaxis</text>
+          <text x="553" y="97" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="11" font-family="sans-serif">Delirium screening</text>
+
+          <!-- Transition arrow &#x2192; PCP (endpoint, not a phase) -->
+          <rect x="654" y="58" width="12" height="8" fill="#C8932A" opacity="0.65"/>
+          <polygon points="664,52 678,62 664,72" fill="#C8932A" opacity="0.65"/>
+          <rect x="678" y="36" width="40" height="52" rx="6" fill="none" stroke="#C8932A" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.75"/>
+          <text x="698" y="57" text-anchor="middle" fill="#C8932A" font-size="9" font-weight="700" font-family="sans-serif" opacity="0.9">PCP</text>
+          <text x="698" y="70" text-anchor="middle" fill="#C8932A" font-size="8.5" font-family="sans-serif" opacity="0.85">Handoff</text>
+
+          <!-- Curved arc spanning 3 phases -->
+          <path d="M 25 122 Q 330 168 654 122" fill="none" stroke="#1A7E8E" stroke-width="2.5" stroke-dasharray="7,5" opacity="0.6"/>
+          <text x="330" y="162" text-anchor="middle" fill="#1A7E8E" font-size="11.5" font-family="sans-serif" font-style="italic" opacity="0.9">Continuous, patient-centered perioperative care continuum</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- COL 3, row 1: Implementation -->
+    <div class="panel blue">
+      <div class="panel-header">
+        <div class="panel-title">Implementation Architecture</div>
+      </div>
+      <div class="panel-body">
+        <div class="comp-cards">
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">Referral &amp; Enrollment Pathway</div>
+              <div class="comp-desc">PSH referral initiated by the surgeon's office at time of surgical scheduling; target pathway automates enrollment via Epic order set triggered at booking. Minimum lead time 6–8 weeks pre-procedure. Eligible population: all elective THA/TKA/related orthopedic patients age ≥55 at the Guthrie Lourdes ASC.</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">Patient Navigator Program</div>
+              <div class="comp-desc">A dedicated navigator is assigned at referral and serves as the patient's single point of contact from preoperative evaluation through PCP handoff. Coordinates appointments, tracks optimization milestones, and flags incomplete items to the perioperative internist. Proactively notifies all involved departments of any schedule changes arising from clinical considerations. Transmits a structured summary to the PCP at discharge — replacing the erroneous medication instructions and arrival communications that patients have reported when navigating the current multi-office model.</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">Standardized SmartForm Intake (Epic)</div>
+              <div class="comp-desc">Risk scores, labs, optimization flags, and anesthesia briefing fields embedded in Epic workflow; Care Everywhere for external record retrieval</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">Comprehensive Preoperative Lab Panel</div>
+              <div class="comp-desc">CBC, CMP with eGFR (CKD staging — Stage ≥3 triggers nephrology co-management consideration), HbA1c, fructosamine (≤293 µmol/L threshold), coagulation profile, serum albumin, TLC, transferrin; ECG and chest X-ray as indicated</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">Medication Optimization Protocol</div>
+              <div class="comp-desc">Anticoagulant/antiplatelet bridging per procedure-specific bleeding risk, with renal dose adjustment for CKD (rivaroxaban/apixaban preferred over LMWH in Stage III–IV; UFH in Stage V); NSAIDs contraindicated in CKD ≥3. Beers Criteria review; antibiotic prophylaxis renally adjusted; insulin management; polypharmacy triage</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">Patient Blood Management (PBM)</div>
+              <div class="comp-desc">Preop anemia optimization (iron, EPO where indicated) + TXA screening per AAHKS/AAOS/ASRA/Hip &amp; Knee Societies consensus guideline</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">Nutritional &amp; Frailty Assessment</div>
+              <div class="comp-desc">MNA-SF primary screen; biochemical anchors: albumin, TLC, transferrin; CFS ≥5 triggers prehabilitation referral; delirium–malnutrition link explicitly flagged</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">PT/OT Functional Baseline Evaluation</div>
+              <div class="comp-desc">PT/OT assessment at initial preop visit documents mobility, strength, and ADL function. Establishes objective discharge planning criteria (home vs. SNF) and enables pre-to-post functional outcome comparison at 6 and 12 months. All post-acute PT/OT arrangements confirmed prior to surgery — in contrast to the current standard of deferring these arrangements to the day of discharge.</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">Structured Preoperative Summary Note</div>
+              <div class="comp-desc">At completion of the optimization period, a comprehensive medical note is generated synthesizing all preoperative data — drawing from the Guthrie Epic EMR and CareEverywhere records from outside institutions. AI-assisted history generation tools — including Epic's integrated AI summarization capabilities and available third-party options — supplement clinician synthesis to improve comprehensiveness and support identification of potential perioperative complications that might otherwise be missed in manual record review. The note is structured with discipline-specific sections tailored to the surgeons, anesthesiologists, PACU nursing staff, postoperative nurses, and hospitalists — each receiving the clinical information most relevant to their role in the patient's perioperative care.</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">Patient Education &amp; Prehabilitation Counseling</div>
+              <div class="comp-desc">Builds on the existing Joint Academy workbooks with deeper engagement: prehabilitation exercise protocol, VTE prevention, expected recovery trajectory, and opioid stewardship expectations. SDOH screening integrated at the initial visit to identify and address social barriers to optimization and recovery. Long-term goal: instilling durable healthy lifestyle practices that the primary care provider can continue building upon well beyond recovery. Written discharge criteria provided and reviewed preoperatively.</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">Governance &amp; Quality Oversight</div>
+              <div class="comp-desc">Steering committee co-chaired by perioperative medicine and orthopedic surgery; members include anesthesiology, pharmacy, nursing, PT/OT, and social work. Quarterly PDSA review cycles assess outcomes against baseline metrics; protocol revision triggered by ≥10% deviation from established outcome benchmarks. Annual report to Surgery and Medicine department leadership and CMO.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COL 4, rows 1-2: Outcomes -->
+    <div class="panel gold tall">
+      <div class="panel-header">
+        <div class="panel-title">Anticipated Outcomes &amp; Metrics</div>
+      </div>
+      <div class="panel-body">
+        <p style="font-size:0.135in; color:var(--muted);">Targets based on published PSH and ERAS outcomes literature. Metrics will be tracked at 6, 12, and 24 months post-PSH launch (2027), compared against 2026 ASC baseline and pre-ASC historical controls.</p>
+        <div class="outcome-list">
+          <div>
+            <div class="outcome-header">
+              <span class="outcome-label">Postoperative Complication Rate</span>
+              <span class="outcome-val">↓ 3–5 pp</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
+            <div class="outcome-note">Target: ~10% → &lt;7% at 12 months; ~108–180 events averted/yr at projected volume</div>
+          </div>
+          <div>
+            <div class="outcome-header">
+              <span class="outcome-label">Day-of-Surgery Cancellation Rate</span>
+              <span class="outcome-val">↓ ≥1%</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+            <div class="outcome-note">~36 cases/yr recaptured; est. $90K–$180K annual savings in OR time and staffing</div>
+          </div>
+          <div>
+            <div class="outcome-header">
+              <span class="outcome-label">Mean Length of Stay</span>
+              <span class="outcome-val">↓ 0.3 days</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
+            <div class="outcome-note">At 3,600 annual cases: $1.08M–$2.7M potential annual savings ($1,000–$2,500/day)</div>
+          </div>
+          <div>
+            <div class="outcome-header">
+              <span class="outcome-label">30-Day Readmission Rate</span>
+              <span class="outcome-val">↓ prospective tracking</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:50%"></div></div>
+            <div class="outcome-note">Tracked vs. institutional baseline; no prespecified reduction claim</div>
+          </div>
+          <div>
+            <div class="outcome-header">
+              <span class="outcome-label">Pre-op Optimization Compliance</span>
+              <span class="outcome-val">≥90% target</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
+            <div class="outcome-note">SmartForm completion; HbA1c &lt;8.5% achieved; OSA plan documented</div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <p style="font-weight:700; color:var(--navy); font-size:0.16in;">Financial Impact Summary:</p>
+        <div class="stat-grid">
+          <div class="stat-box g">
+            <div class="stat-val">$2.1–3.5M</div>
+            <div class="stat-lbl">Annual savings from complication reduction<br><span style="color:#4A5568;">~108–180 events @ $19,600 each</span></div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val">$90–180K</div>
+            <div class="stat-lbl">Annual savings from reduced day-of cancellations</div>
+          </div>
+        </div>
+        <p style="font-size:0.122in; color:var(--muted); margin-top:-0.02in; text-align:center;">+ LOS savings: $1.08M–$2.7M/yr &nbsp;·&nbsp; Combined total: <strong style="color:var(--navy);">$3.3M–$6.4M</strong></p>
+        <div class="divider"></div>
+        <p><span class="label navy">Academic Outcomes</span> Resident-led QI projects, outcome tracking, and case presentations integrated from Day 1. Platform supports ongoing research, annual reporting, and publication pipeline.</p>
+
+        <!-- Study Design Comparator -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDIwIDI0OCIgd2lkdGg9IjEwMCUiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iUUkgU3R1ZHkgRGVzaWduIOKAlCBUaHJlZSBDb21wYXJhdG9yIEdyb3VwcyIgb3ZlcmZsb3c9ImhpZGRlbiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0iZmxleC1zaHJpbms6MDsgZGlzcGxheTpibG9jazsgYXNwZWN0LXJhdGlvOjQyMC8yNDg7IG92ZXJmbG93OmhpZGRlbjsiPgoKICAgICAgICAgIDwhLS0gVGl0bGUgLS0+CiAgICAgICAgICA8dGV4dCB4PSIyMTAiIHk9IjE0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMEQyQjRFIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+UUkgU3R1ZHkgRGVzaWduIOKAlCBUaHJlZSBDb21wYXJhdG9yIEdyb3VwczwvdGV4dD4KCiAgICAgICAgICA8IS0tIFRpbWVsaW5lIGF4aXM6IHk9NDggLS0+CiAgICAgICAgICA8bGluZSB4MT0iMjgiIHkxPSI0OCIgeDI9IjQwMCIgeTI9IjQ4IiBzdHJva2U9IiNDQkQ1RTAiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgICAgICAgPHBvbHlnb24gcG9pbnRzPSIzOTcsNDMgNDEwLDQ4IDM5Nyw1MyIgZmlsbD0iI0NCRDVFMCIvPgoKICAgICAgICAgIDwhLS0gQVNDIE9wZW5zIG1hcmtlciDigJQgc2luZ2xlIGNvbWJpbmVkIGxhYmVsLCB5ZWFyIG1lcmdlZCAtLT4KICAgICAgICAgIDxsaW5lIHgxPSIxMzUiIHkxPSIzNCIgeDI9IjEzNSIgeTI9IjYwIiBzdHJva2U9IiMxQTdFOEUiIHN0cm9rZS13aWR0aD0iMi41Ii8+CiAgICAgICAgICA8dGV4dCB4PSIxMzUiIHk9IjI4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMUE3RThFIiBmb250LXNpemU9IjkuNSIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPkFTQyBPcGVucyDCtyAyMDI2PC90ZXh0PgoKICAgICAgICAgIDwhLS0gUFNIIExhdW5jaCBtYXJrZXIgLS0+CiAgICAgICAgICA8bGluZSB4MT0iMjgyIiB5MT0iMzQiIHgyPSIyODIiIHkyPSI2MCIgc3Ryb2tlPSIjQzg5MzJBIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogICAgICAgICAgPHRleHQgeD0iMjgyIiB5PSIyOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI0M4OTMyQSIgZm9udC1zaXplPSI5LjUiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5QU0ggTGF1bmNoIMK3IDIwMjc8L3RleHQ+CgogICAgICAgICAgPCEtLSBFcmEgbGFiZWxzIC0tPgogICAgICAgICAgPHRleHQgeD0iNjUiICB5PSI2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzRBNTU2OCIgZm9udC1zaXplPSI5IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+UHJlLUFTQyBlcmE8L3RleHQ+CiAgICAgICAgICA8dGV4dCB4PSIyMDgiIHk9IjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNEE1NTY4IiBmb250LXNpemU9IjkiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5CYXNlbGluZSB5ZWFyPC90ZXh0PgogICAgICAgICAgPHRleHQgeD0iMzQ4IiB5PSI2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzRBNTU2OCIgZm9udC1zaXplPSI5IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+SW50ZXJ2ZW50aW9uIHllYXI8L3RleHQ+CgogICAgICAgICAgPCEtLSBHcm91cCBBOiBIaXN0b3JpY2FsIENvbnRyb2xzIC0tPgogICAgICAgICAgPHJlY3QgeD0iMTgiICB5PSI3NCIgd2lkdGg9IjExMiIgaGVpZ2h0PSI0MCIgcng9IjciIGZpbGw9IiM2QjcyODAiIG9wYWNpdHk9IjAuMTgiLz4KICAgICAgICAgIDxyZWN0IHg9IjE4IiAgeT0iNzQiIHdpZHRoPSIxMTIiIGhlaWdodD0iNDAiIHJ4PSI3IiBmaWxsPSJub25lIiBzdHJva2U9IiM2QjcyODAiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtZGFzaGFycmF5PSI1LDMiLz4KICAgICAgICAgIDx0ZXh0IHg9Ijc0IiAgeT0iOTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM0QTU1NjgiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5Hcm91cCBBPC90ZXh0PgoKICAgICAgICAgIDwhLS0gR3JvdXAgQjogQVNDIEJhc2VsaW5lIC0tPgogICAgICAgICAgPHJlY3QgeD0iMTUyIiB5PSI3NCIgd2lkdGg9IjExOCIgaGVpZ2h0PSI0MCIgcng9IjciIGZpbGw9IiMxQTUyNzYiIG9wYWNpdHk9IjAuMTUiLz4KICAgICAgICAgIDxyZWN0IHg9IjE1MiIgeT0iNzQiIHdpZHRoPSIxMTgiIGhlaWdodD0iNDAiIHJ4PSI3IiBmaWxsPSJub25lIiBzdHJva2U9IiMxQTUyNzYiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgICAgICAgPGNpcmNsZSBjeD0iMTU2IiBjeT0iNzgiIHI9IjUiIGZpbGw9IiMxQTdFOEUiLz4KICAgICAgICAgIDx0ZXh0IHg9IjIxMSIgeT0iOTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxQTUyNzYiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5Hcm91cCBCPC90ZXh0PgoKICAgICAgICAgIDwhLS0gR3JvdXAgQzogUFNIIENvaG9ydCAtLT4KICAgICAgICAgIDxyZWN0IHg9IjI5MiIgeT0iNzQiIHdpZHRoPSIxMTgiIGhlaWdodD0iNDAiIHJ4PSI3IiBmaWxsPSIjQzg5MzJBIiBvcGFjaXR5PSIwLjE1Ii8+CiAgICAgICAgICA8cmVjdCB4PSIyOTIiIHk9Ijc0IiB3aWR0aD0iMTE4IiBoZWlnaHQ9IjQwIiByeD0iNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzg5MzJBIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogICAgICAgICAgPHRleHQgeD0iMzUxIiB5PSI5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzBEMkI0RSIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPkdyb3VwIEM8L3RleHQ+CgogICAgICAgICAgPCEtLSBOT1cgYmFkZ2Ug4oCUIHNpdHMganVzdCBiZWxvdyBHcm91cCBCLCBjbGVhciBvZiBkZXNjcmlwdGlvbiB0ZXh0IC0tPgogICAgICAgICAgPHJlY3QgeD0iMTk0IiB5PSIxMTciIHdpZHRoPSIzNCIgaGVpZ2h0PSIxNCIgcng9IjQiIGZpbGw9IiMxQTdFOEUiLz4KICAgICAgICAgIDx0ZXh0IHg9IjIxMSIgeT0iMTI3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSI5IiBmb250LXdlaWdodD0iNzAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+Tk9XPC90ZXh0PgoKICAgICAgICAgIDwhLS0gR3JvdXAgZGVzY3JpcHRpb25zIOKAlCBzdGFydCBiZWxvdyBOT1cgYmFkZ2Ugd2l0aCBjbGVhciBnYXAgLS0+CiAgICAgICAgICA8dGV4dCB4PSIxOCIgIHk9IjE0MCIgZmlsbD0iIzRBNTU2OCIgZm9udC1zaXplPSI5LjUiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5IaXN0b3JpY2FsIENvbnRyb2xzPC90ZXh0PgogICAgICAgICAgPHRleHQgeD0iMTgiICB5PSIxNTIiIGZpbGw9IiM0QTU1NjgiIGZvbnQtc2l6ZT0iOSIgICBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+UHJlLUFTQyBjb252ZW50aW9uYWw8L3RleHQ+CiAgICAgICAgICA8dGV4dCB4PSIxOCIgIHk9IjE2MyIgZmlsbD0iIzRBNTU2OCIgZm9udC1zaXplPSI5IiAgIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5vcnRob3BlZGljIHN1cmdlcnk8L3RleHQ+CgogICAgICAgICAgPHRleHQgeD0iMTUyIiB5PSIxNDAiIGZpbGw9IiMxQTUyNzYiIGZvbnQtc2l6ZT0iOS41IiBmb250LXdlaWdodD0iNzAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+QVNDIEJhc2VsaW5lIDIwMjY8L3RleHQ+CiAgICAgICAgICA8dGV4dCB4PSIxNTIiIHk9IjE1MiIgZmlsbD0iIzFBNTI3NiIgZm9udC1zaXplPSI5IiAgIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5BU0Mgc3VyZ2ljYWwgY2FyZSw8L3RleHQ+CiAgICAgICAgICA8dGV4dCB4PSIxNTIiIHk9IjE2MyIgZmlsbD0iIzFBNTI3NiIgZm9udC1zaXplPSI5IiAgIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5ubyBQU0ggKHByb3NwZWN0aXZlKTwvdGV4dD4KCiAgICAgICAgICA8dGV4dCB4PSIyOTIiIHk9IjE0MCIgZmlsbD0iIzBEMkI0RSIgZm9udC1zaXplPSI5LjUiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5QU0ggQ29ob3J0IDIwMjcrPC90ZXh0PgogICAgICAgICAgPHRleHQgeD0iMjkyIiB5PSIxNTIiIGZpbGw9IiMwRDJCNEUiIGZvbnQtc2l6ZT0iOSIgICBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+QVNDIHN1cmdlcnkgd2l0aCBmdWxsPC90ZXh0PgogICAgICAgICAgPHRleHQgeD0iMjkyIiB5PSIxNjMiIGZpbGw9IiMwRDJCNEUiIGZvbnQtc2l6ZT0iOSIgICBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+UFNIIGludGVydmVudGlvbjwvdGV4dD4KCiAgICAgICAgICA8IS0tIENvbXBhcmlzb24gYXJyb3dzIOKAlCBjbGVhciB6b25lIGJlbG93IGRlc2NyaXB0aW9ucyAtLT4KICAgICAgICAgIDwhLS0gQiB2cyBDIChwcmltYXJ5KSDigJQgYm9sZCB0ZWFsIGhvcml6b250YWwgLS0+CiAgICAgICAgICA8bGluZSB4MT0iMjExIiB5MT0iMTc2IiB4Mj0iMzUxIiB5Mj0iMTc2IiBzdHJva2U9IiMxQTdFOEUiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgICAgICAgPHBvbHlnb24gcG9pbnRzPSIzNDYsMTcyIDM2MCwxNzYgMzQ2LDE4MCIgZmlsbD0iIzFBN0U4RSIvPgogICAgICAgICAgPHRleHQgeD0iMjg1IiB5PSIxODkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxQTdFOEUiIGZvbnQtc2l6ZT0iOSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPlByaW1hcnk6IEMgdnMuIEIgKFBTSCBlZmZlY3QpPC90ZXh0PgoKICAgICAgICAgIDwhLS0gQSB2cyBDIChzZWNvbmRhcnkpIOKAlCBkYXNoZWQgYnJhY2tldCAtLT4KICAgICAgICAgIDxsaW5lIHgxPSI3NCIgIHkxPSIxNzMiIHgyPSI3NCIgIHkyPSIyMDAiIHN0cm9rZT0iIzZCNzI4MCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1kYXNoYXJyYXk9IjQsMyIvPgogICAgICAgICAgPGxpbmUgeDE9IjM1MSIgeTE9IjE3MyIgeDI9IjM1MSIgeTI9IjIwMCIgc3Ryb2tlPSIjQzg5MzJBIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNCwzIi8+CiAgICAgICAgICA8bGluZSB4MT0iNzQiICB5MT0iMjAwIiB4Mj0iMzUxIiB5Mj0iMjAwIiBzdHJva2U9IiM2QjcyODAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICAgICAgICA8cG9seWdvbiBwb2ludHM9IjM0NiwxOTYgMzYwLDIwMCAzNDYsMjA0IiBmaWxsPSIjNkI3MjgwIi8+CiAgICAgICAgICA8dGV4dCB4PSIyMTIiIHk9IjIxMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZCNzI4MCIgZm9udC1zaXplPSI5IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+U2Vjb25kYXJ5OiBDIHZzLiBBICh2cy4gcHJlLUFTQyBlcmEpPC90ZXh0PgoKICAgICAgICAgIDwhLS0gTWVhc3VyZW1lbnQgZm9vdG5vdGUgLS0+CiAgICAgICAgICA8dGV4dCB4PSIyMTAiIHk9IjIzMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzRBNTU2OCIgZm9udC1zaXplPSI5IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zdHlsZT0iaXRhbGljIj5NZWFzdXJlbWVudCBwb2ludHM6IDYsIDEyLCAyNCBtb250aHMgcG9zdC1QU0ggbGF1bmNoPC90ZXh0PgogICAgICAgIDwvc3ZnPg==" style="width:100%; display:block; flex-shrink:0; margin-top:0.08in;" alt="QI Study Design — Three Comparator Groups">
+
+        <div class="divider"></div>
+        <p style="font-weight:700; color:var(--navy); font-size:0.155in; flex-shrink:0;">Baseline Metrics — Data Collection Framework (2026)</p>
+        <svg viewBox="0 0 420 224" width="100%" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+
+          <!-- Header row -->
+          <rect x="0" y="0" width="420" height="24" rx="5" fill="#0D2B4E"/>
+          <text x="88"  y="15" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="sans-serif">Metric</text>
+          <text x="230" y="15" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="sans-serif">Data Source</text>
+          <text x="363" y="15" text-anchor="middle" fill="white" font-size="10" font-weight="700" font-family="sans-serif">Comparator</text>
+
+          <!-- Column dividers -->
+          <line x1="176" y1="0" x2="176" y2="200" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <line x1="284" y1="0" x2="284" y2="200" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+
+          <!-- Row 1 -->
+          <rect x="0" y="24" width="420" height="24" rx="0" fill="#E8EEF4"/>
+          <text x="6"   y="39" fill="#0D2B4E" font-size="9.5" font-weight="700" font-family="sans-serif">Complication rate (90-day)</text>
+          <text x="182" y="39" fill="#1A5276" font-size="9.5" font-family="sans-serif">Epic/surg. registry</text>
+          <text x="290" y="39" fill="#4A5568" font-size="9.5" font-family="sans-serif">Groups A &amp; B vs. C</text>
+
+          <!-- Row 2 -->
+          <rect x="0" y="48" width="420" height="24" rx="0" fill="white"/>
+          <text x="6"   y="63" fill="#0D2B4E" font-size="9.5" font-weight="700" font-family="sans-serif">30-day readmission rate</text>
+          <text x="182" y="63" fill="#1A5276" font-size="9.5" font-family="sans-serif">Epic / CMS claims</text>
+          <text x="290" y="63" fill="#4A5568" font-size="9.5" font-family="sans-serif">Groups A &amp; B vs. C</text>
+
+          <!-- Row 3 -->
+          <rect x="0" y="72" width="420" height="24" rx="0" fill="#E8EEF4"/>
+          <text x="6"   y="87" fill="#0D2B4E" font-size="9.5" font-weight="700" font-family="sans-serif">Mean length of stay (days)</text>
+          <text x="182" y="87" fill="#1A5276" font-size="9.5" font-family="sans-serif">Epic ADT records</text>
+          <text x="290" y="87" fill="#4A5568" font-size="9.5" font-family="sans-serif">Groups A &amp; B vs. C</text>
+
+          <!-- Row 4 -->
+          <rect x="0" y="96" width="420" height="24" rx="0" fill="white"/>
+          <text x="6"   y="111" fill="#0D2B4E" font-size="9.5" font-weight="700" font-family="sans-serif">Day-of cancellation rate</text>
+          <text x="182" y="111" fill="#1A5276" font-size="9.5" font-family="sans-serif">OR scheduling system</text>
+          <text x="290" y="111" fill="#4A5568" font-size="9.5" font-family="sans-serif">Group B vs. C</text>
+
+          <!-- Row 5 -->
+          <rect x="0" y="120" width="420" height="24" rx="0" fill="#E8EEF4"/>
+          <text x="6"   y="135" fill="#0D2B4E" font-size="9.5" font-weight="700" font-family="sans-serif">Pre-op HbA1c &lt;8.5% compliance</text>
+          <text x="182" y="135" fill="#1A5276" font-size="9.5" font-family="sans-serif">Epic SmartForm</text>
+          <text x="290" y="135" fill="#4A5568" font-size="9.5" font-family="sans-serif">Group C only (process)</text>
+
+          <!-- Row 6 -->
+          <rect x="0" y="144" width="420" height="24" rx="0" fill="white"/>
+          <text x="6"   y="159" fill="#0D2B4E" font-size="9.5" font-weight="700" font-family="sans-serif">VTE event rate (90-day)</text>
+          <text x="182" y="159" fill="#1A5276" font-size="9.5" font-family="sans-serif">ICD-10 / radiology</text>
+          <text x="290" y="159" fill="#4A5568" font-size="9.5" font-family="sans-serif">Groups A &amp; B vs. C</text>
+
+          <!-- Row 7 -->
+          <rect x="0" y="168" width="420" height="24" rx="0" fill="#E8EEF4"/>
+          <text x="6"   y="183" fill="#0D2B4E" font-size="9.5" font-weight="700" font-family="sans-serif">SSI rate (30-day)</text>
+          <text x="182" y="183" fill="#1A5276" font-size="9.5" font-family="sans-serif">NHSN / inf. control</text>
+          <text x="290" y="183" fill="#4A5568" font-size="9.5" font-family="sans-serif">Groups A &amp; B vs. C</text>
+
+          <!-- Row 8 -->
+          <rect x="0" y="192" width="420" height="24" rx="0" fill="white"/>
+          <text x="6"   y="207" fill="#0D2B4E" font-size="9.5" font-weight="700" font-family="sans-serif">Pre-to-post functional status (6, 12 mo.)</text>
+          <text x="182" y="207" fill="#1A5276" font-size="9.5" font-family="sans-serif">PT/OT assessment</text>
+          <text x="290" y="207" fill="#4A5568" font-size="9.5" font-family="sans-serif">B &amp; C vs. baseline</text>
+
+          <!-- Bottom border -->
+          <rect x="0" y="216" width="420" height="8" rx="0 0 5 5" fill="#0D2B4E" opacity="0.08"/>
+          <line x1="176" y1="24" x2="176" y2="216" stroke="#CBD5E0" stroke-width="1"/>
+          <line x1="284" y1="24" x2="284" y2="216" stroke="#CBD5E0" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- COL 2, row 2: Risk Stratification -->
+    <div class="panel teal">
+      <div class="panel-header">
+        <div class="panel-title">Key Risk Stratification Tools</div>
+      </div>
+      <div class="panel-body">
+        <div class="comp-cards">
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">STOP-BANG (OSA Screening)</div>
+              <div class="comp-desc"><strong>Score ≥3:</strong> High risk for moderate-severe OSA → formal evaluation; CPAP optimization pre-op if OSA confirmed or clinically indicated &nbsp;|&nbsp; <strong>Score ≥5:</strong> High probability severe OSA → urgent CPAP titration + anesthesia alert. (Chung F et al., Anesthesiology 2008)</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">RCRI / 2024 ACC/AHA Stepwise Algorithm</div>
+              <div class="comp-desc"><strong>RCRI ≥2 or MACE risk ≥1%</strong> triggers: DASI functional assessment → NT-proBNP → judicious stress testing as indicated. (Thompson et al., Circulation 2024)</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">Clinical Frailty Scale (CFS)</div>
+              <div class="comp-desc"><strong>CFS ≥5</strong> (moderate-to-severe frailty): multidisciplinary prehabilitation, nutritional support, social work engagement, enhanced postoperative monitoring and delirium prevention protocols</div>
+            </div>
+          </div>
+          <div class="comp-card">
+            <div>
+              <div class="comp-name">Glycemic Threshold: HbA1c &lt;8.5%</div>
+              <div class="comp-desc">Per UK JBDS perioperative guidelines; correlates with 90-day mean RBC lifespan. <strong>Fructosamine ≤293 µmol/L</strong> used when HbA1c unreliable (hemoglobinopathy, hemolysis, recent transfusion). (Shohat et al., Bone Joint J 2019)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ACC/AHA 2024 Stepwise Cardiac Algorithm -->
+        <p style="font-weight:700; color:var(--navy); font-size:0.16in; flex-shrink:0;">2024 ACC/AHA Stepwise Perioperative Cardiac Evaluation</p>
+        <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODQwIDM0MiIgd2lkdGg9IjEwMCUiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iMjAyNCBBQ0MvQUhBIFN0ZXB3aXNlIFBlcmlvcGVyYXRpdmUgQ2FyZGlhYyBFdmFsdWF0aW9uIGFsZ29yaXRobSIgb3ZlcmZsb3c9ImhpZGRlbiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0iZmxleC1zaHJpbms6MDsgZGlzcGxheTpibG9jazsgYXNwZWN0LXJhdGlvOjg0MC8zNDI7IG92ZXJmbG93OmhpZGRlbjsiPgoKICAgICAgICAgIDwhLS0gTGF5b3V0OgogICAgICAgICAgICAgICBDZW50ZXIgYm94ZXM6IHg9MTk14oCTNjA1ICh3PTQxMCwgY2VudGVyPTQwMCkKICAgICAgICAgICAgICAgTGVmdCAoUG9zdHBvbmUpOiB4PTE14oCTMTc4ICh3PTE2MywgY2VudGVyPTk3KQogICAgICAgICAgICAgICBSaWdodCAoUHJvY2VlZCk6IHg9NjIy4oCTNzk2ICh3PTE3NCwgY2VudGVyPTcwOSkKICAgICAgICAgICAgICAgU3RlcCB0b3BzOiA0LCA3OCwgMTQ4LCAyMTgsIDI4OC4gRWFjaCBoPTQ0LiBHYXBzOiAzMHB4LiAtLT4KCiAgICAgICAgICA8IS0tIOKVkOKVkOKVkCBTVEVQIDE6IEFjdGl2ZSBDYXJkaWFjIENvbmRpdGlvbiDilZDilZDilZAgLS0+CiAgICAgICAgICA8cmVjdCB4PSIxOTUiIHk9IjQiIHdpZHRoPSI0MTAiIGhlaWdodD0iNDQiIHJ4PSI3IiBmaWxsPSIjN0IxQzFDIi8+CiAgICAgICAgICA8dGV4dCB4PSI0MDAiIHk9IjIyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPkFjdGl2ZSBDYXJkaWFjIENvbmRpdGlvbj88L3RleHQ+CiAgICAgICAgICA8dGV4dCB4PSI0MDAiIHk9IjM4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuODIpIiBmb250LXNpemU9IjkuNSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPlVuc3RhYmxlIGFuZ2luYSDCtyBEZWNvbXBlbnNhdGVkIEhGIMK3IFNpZ25pZmljYW50IGFycmh5dGhtaWEgwrcgU2V2ZXJlIFZIRDwvdGV4dD4KCiAgICAgICAgICA8IS0tIFlFUyDihpIgbGVmdCB0byBQb3N0cG9uZSAtLT4KICAgICAgICAgIDxsaW5lIHgxPSIxOTUiIHkxPSIyNiIgeDI9Ijk3IiB5Mj0iMjYiIHN0cm9rZT0iIzdCMUMxQyIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICAgICAgICA8bGluZSB4MT0iOTciIHkxPSIyNiIgeDI9Ijk3IiB5Mj0iNzgiIHN0cm9rZT0iIzdCMUMxQyIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICAgICAgICA8cG9seWdvbiBwb2ludHM9IjkzLDc1IDk3LDg4IDEwMSw3NSIgZmlsbD0iIzdCMUMxQyIvPgogICAgICAgICAgPHRleHQgeD0iMTQ4IiB5PSIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzdCMUMxQyIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPllFUzwvdGV4dD4KCiAgICAgICAgICA8IS0tIFBvc3Rwb25lIGJveCAtLT4KICAgICAgICAgIDxyZWN0IHg9IjE1IiB5PSI4OCIgd2lkdGg9IjE2MyIgaGVpZ2h0PSI0MCIgcng9IjYiIGZpbGw9IiM3QjFDMUMiIG9wYWNpdHk9IjAuMTIiLz4KICAgICAgICAgIDxyZWN0IHg9IjE1IiB5PSI4OCIgd2lkdGg9IjE2MyIgaGVpZ2h0PSI0MCIgcng9IjYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdCMUMxQyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICAgICAgICAgIDx0ZXh0IHg9Ijk3IiB5PSIxMDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3QjFDMUMiIGZvbnQtc2l6ZT0iMTAuNSIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPlBvc3Rwb25lIHN1cmdlcnk7PC90ZXh0PgogICAgICAgICAgPHRleHQgeD0iOTciIHk9IjEyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzdCMUMxQyIgZm9udC1zaXplPSIxMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPmV2YWx1YXRlICZhbXA7IHRyZWF0PC90ZXh0PgoKICAgICAgICAgIDwhLS0gTk8g4oaSIGRvd24gdG8gU3RlcCAyIC0tPgogICAgICAgICAgPGxpbmUgeDE9IjQwMCIgeTE9IjQ4IiB4Mj0iNDAwIiB5Mj0iNzIiIHN0cm9rZT0iIzBEMkI0RSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICAgICAgICA8cG9seWdvbiBwb2ludHM9IjM5Niw2OSA0MDAsODIgNDA0LDY5IiBmaWxsPSIjMEQyQjRFIi8+CiAgICAgICAgICA8dGV4dCB4PSI0MTMiIHk9IjY0IiBmaWxsPSIjMUE3RThFIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iNzAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+Tk88L3RleHQ+CgogICAgICAgICAgPCEtLSDilZDilZDilZAgU1RFUCAyOiBMb3ctUmlzayBTdXJnZXJ5PyDilZDilZDilZAgLS0+CiAgICAgICAgICA8cmVjdCB4PSIxOTUiIHk9IjgyIiB3aWR0aD0iNDEwIiBoZWlnaHQ9IjQ0IiByeD0iNyIgZmlsbD0iIzBEMkI0RSIvPgogICAgICAgICAgPHRleHQgeD0iNDAwIiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+TG93LVJpc2sgU3VyZ2VyeT8gKEVzdGltYXRlZCBNQUNFICZsdDsxJSk8L3RleHQ+CiAgICAgICAgICA8dGV4dCB4PSI0MDAiIHk9IjExNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjc4KSIgZm9udC1zaXplPSI5LjUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5TdXBlcmZpY2lhbCwgZW5kb3Njb3BpYywgY2F0YXJhY3QsIG1pbm9yIGJyZWFzdCBwcm9jZWR1cmVzPC90ZXh0PgoKICAgICAgICAgIDwhLS0gWUVTIOKGkiByaWdodCB0byBQcm9jZWVkIHdpdGhvdXQgdGVzdGluZyAtLT4KICAgICAgICAgIDxsaW5lIHgxPSI2MDUiIHkxPSIxMDQiIHgyPSI2NTUiIHkyPSIxMDQiIHN0cm9rZT0iIzFBN0U4RSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICAgICAgICA8cG9seWdvbiBwb2ludHM9IjY1MiwxMDAgNjY2LDEwNCA2NTIsMTA4IiBmaWxsPSIjMUE3RThFIi8+CiAgICAgICAgICA8dGV4dCB4PSI2MzUiIHk9Ijk4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMUE3RThFIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iNzAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+WUVTPC90ZXh0PgogICAgICAgICAgPHJlY3QgeD0iNjY2IiB5PSI4MiIgd2lkdGg9IjE2OCIgaGVpZ2h0PSI0NCIgcng9IjYiIGZpbGw9IiMxQTdFOEUiIG9wYWNpdHk9IjAuMTMiLz4KICAgICAgICAgIDxyZWN0IHg9IjY2NiIgeT0iODIiIHdpZHRoPSIxNjgiIGhlaWdodD0iNDQiIHJ4PSI2IiBmaWxsPSJub25lIiBzdHJva2U9IiMxQTdFOEUiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICAgICAgICA8dGV4dCB4PSI3NTAiIHk9IjEwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzFBN0U4RSIgZm9udC1zaXplPSIxMC41IiBmb250LXdlaWdodD0iNzAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+UHJvY2VlZCB3aXRob3V0PC90ZXh0PgogICAgICAgICAgPHRleHQgeD0iNzUwIiB5PSIxMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxQTdFOEUiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5mdXJ0aGVyIHRlc3Rpbmc8L3RleHQ+CgogICAgICAgICAgPCEtLSBOTyDihpIgZG93biB0byBTdGVwIDMgLS0+CiAgICAgICAgICA8bGluZSB4MT0iNDAwIiB5MT0iMTI2IiB4Mj0iNDAwIiB5Mj0iMTQyIiBzdHJva2U9IiMwRDJCNEUiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgICAgICAgPHBvbHlnb24gcG9pbnRzPSIzOTYsMTM5IDQwMCwxNTIgNDA0LDEzOSIgZmlsbD0iIzBEMkI0RSIvPgogICAgICAgICAgPHRleHQgeD0iNDEzIiB5PSIxMzgiIGZpbGw9IiMxQTdFOEUiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5OTzwvdGV4dD4KCiAgICAgICAgICA8IS0tIOKVkOKVkOKVkCBTVEVQIDM6IENhbGN1bGF0ZSBSQ1JJIOKVkOKVkOKVkCAtLT4KICAgICAgICAgIDxyZWN0IHg9IjE5NSIgeT0iMTUyIiB3aWR0aD0iNDEwIiBoZWlnaHQ9IjQ0IiByeD0iNyIgZmlsbD0iIzFBNTI3NiIvPgogICAgICAgICAgPHRleHQgeD0iNDAwIiB5PSIxNzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+Q2FsY3VsYXRlIFJDUkkg4oCUIEVzdGltYXRlIE1BQ0UgUmlzazwvdGV4dD4KICAgICAgICAgIDx0ZXh0IHg9IjQwMCIgeT0iMTg2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuODIpIiBmb250LXNpemU9IjkuNSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPlJDUkkg4omkMSBhbmQgTUFDRSAmbHQ7MSUg4oaSIHByb2NlZWQgwrcgUkNSSSAmZ3Q7MSBvciBNQUNFIOKJpTElIOKGkiBjb250aW51ZTwvdGV4dD4KCiAgICAgICAgICA8IS0tIE1BQ0Ug4omlMSUg4oaSIGRvd24gdG8gU3RlcCA0IC0tPgogICAgICAgICAgPGxpbmUgeDE9IjQwMCIgeTE9IjE5NiIgeDI9IjQwMCIgeTI9IjIxMiIgc3Ryb2tlPSIjMEQyQjRFIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgICAgICAgIDxwb2x5Z29uIHBvaW50cz0iMzk2LDIwOSA0MDAsMjIyIDQwNCwyMDkiIGZpbGw9IiMwRDJCNEUiLz4KICAgICAgICAgIDx0ZXh0IHg9IjQxMyIgeT0iMjA4IiBmaWxsPSIjQzg5MzJBIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iNzAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+TUFDRSDiiaUxJTwvdGV4dD4KCiAgICAgICAgICA8IS0tIOKVkOKVkOKVkCBTVEVQIDQ6IEZ1bmN0aW9uYWwgQ2FwYWNpdHkgKERBU0kpIOKVkOKVkOKVkCAtLT4KICAgICAgICAgIDxyZWN0IHg9IjE5NSIgeT0iMjIyIiB3aWR0aD0iNDEwIiBoZWlnaHQ9IjQ0IiByeD0iNyIgZmlsbD0iIzFBN0U4RSIvPgogICAgICAgICAgPHRleHQgeD0iNDAwIiB5PSIyNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNzAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+QXNzZXNzIEZ1bmN0aW9uYWwgQ2FwYWNpdHkgKERBU0kpPC90ZXh0PgogICAgICAgICAgPHRleHQgeD0iNDAwIiB5PSIyNTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC44NSkiIGZvbnQtc2l6ZT0iOS41IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+REFTSSDiiaUzNCAo4omlNCBNRVRzIHdpdGhvdXQgc3ltcHRvbXMpIOKGkiBwcm9jZWVkIHdpdGhvdXQgZnVydGhlciB0ZXN0aW5nPC90ZXh0PgoKICAgICAgICAgIDwhLS0g4omlNCBNRVRzIOKGkiByaWdodCB0byBQcm9jZWVkIHRvIHN1cmdlcnkgLS0+CiAgICAgICAgICA8bGluZSB4MT0iNjA1IiB5MT0iMjQ0IiB4Mj0iNjU1IiB5Mj0iMjQ0IiBzdHJva2U9IiMxQTdFOEUiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgICAgICAgPHBvbHlnb24gcG9pbnRzPSI2NTIsMjQwIDY2NiwyNDQgNjUyLDI0OCIgZmlsbD0iIzFBN0U4RSIvPgogICAgICAgICAgPHRleHQgeD0iNjM1IiB5PSIyMzciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxQTdFOEUiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7iiaU0IE1FVHM8L3RleHQ+CiAgICAgICAgICA8cmVjdCB4PSI2NjYiIHk9IjIyMiIgd2lkdGg9IjE2OCIgaGVpZ2h0PSI0NCIgcng9IjYiIGZpbGw9IiMxQTdFOEUiIG9wYWNpdHk9IjAuMTMiLz4KICAgICAgICAgIDxyZWN0IHg9IjY2NiIgeT0iMjIyIiB3aWR0aD0iMTY4IiBoZWlnaHQ9IjQ0IiByeD0iNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUE3RThFIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgICAgICAgPHRleHQgeD0iNzUwIiB5PSIyNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxQTdFOEUiIGZvbnQtc2l6ZT0iMTAuNSIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPlByb2NlZWQgdG88L3RleHQ+CiAgICAgICAgICA8dGV4dCB4PSI3NTAiIHk9IjI1NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzFBN0U4RSIgZm9udC1zaXplPSIxMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPnN1cmdlcnk8L3RleHQ+CgogICAgICAgICAgPCEtLSAmbHQ7NCBNRVRzIOKGkiBkb3duIHRvIFN0ZXAgNSAtLT4KICAgICAgICAgIDxsaW5lIHgxPSI0MDAiIHkxPSIyNjYiIHgyPSI0MDAiIHkyPSIyODIiIHN0cm9rZT0iIzBEMkI0RSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICAgICAgICA8cG9seWdvbiBwb2ludHM9IjM5NiwyNzkgNDAwLDI5MiA0MDQsMjc5IiBmaWxsPSIjMEQyQjRFIi8+CiAgICAgICAgICA8dGV4dCB4PSI0MTMiIHk9IjI3OCIgZmlsbD0iI0M4OTMyQSIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPiZsdDs0IE1FVHMgLyB1bmtub3duPC90ZXh0PgoKICAgICAgICAgIDwhLS0g4pWQ4pWQ4pWQIFNURVAgNTogTlQtcHJvQk5QIC8gU3RyZXNzIFRlc3Rpbmcg4pWQ4pWQ4pWQIC0tPgogICAgICAgICAgPHJlY3QgeD0iMTk1IiB5PSIyOTIiIHdpZHRoPSI0MTAiIGhlaWdodD0iNDAiIHJ4PSI3IiBmaWxsPSIjQzg5MzJBIi8+CiAgICAgICAgICA8dGV4dCB4PSI0MDAiIHk9IjMwOSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5OVC1wcm9CTlAgLyBCTlAgKyBKdWRpY2lvdXMgU3RyZXNzIFRlc3Rpbmc8L3RleHQ+CiAgICAgICAgICA8dGV4dCB4PSI0MDAiIHk9IjMyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjg4KSIgZm9udC1zaXplPSI5LjUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5JZiByZXN1bHQgd2lsbCBjaGFuZ2UgbWFuYWdlbWVudCDCtyBDYXJkaW9sb2d5IGNvbnN1bHRhdGlvbiBhcyBpbmRpY2F0ZWQ8L3RleHQ+CgogICAgICAgICAgPCEtLSBDaXRhdGlvbiAtLT4KICAgICAgICAgIDx0ZXh0IHg9IjQwMCIgeT0iMzQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNEE1NTY4IiBmb250LXNpemU9IjkiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXN0eWxlPSJpdGFsaWMiPlRob21wc29uIEEgZXQgYWwuLCBDaXJjdWxhdGlvbiAyMDI0IChBQ0MvQUhBIFBlcmlvcGVyYXRpdmUgQ2FyZGlvdmFzY3VsYXIgTWFuYWdlbWVudCBHdWlkZWxpbmUpPC90ZXh0PgoKICAgICAgICA8L3N2Zz4=" style="width:100%; display:block; flex-shrink:0;" alt="2024 ACC/AHA Stepwise Perioperative Cardiac Evaluation">
+      </div>
+    </div>
+
+    <!-- COL 3, row 2: Conclusions -->
+    <div class="panel gold">
+      <div class="panel-header">
+        <div class="panel-title">Conclusions &amp; Next Steps</div>
+      </div>
+      <div class="panel-body">
+        <p>With the Guthrie Lourdes ASC now operational, PSH implementation is intentionally staged to maximize scientific rigor: the ASC's inaugural year serves as a prospective baseline, enabling robust pre/post comparison against both pre-ASC surgical volumes and the unoptimized ASC cohort. The PSH extends and systematizes the existing Joint Academy infrastructure — adding navigator-led continuity, a standardized 6–8 week optimization window, and unified patient communication where fragmentation currently exists.</p>
+        <ul>
+          <li><strong>Evidence-aligned:</strong> Structured on ERAS principles, ACC/AHA perioperative guidelines, and joint society VTE/TXA consensus guidance</li>
+          <li><strong>Methodologically rigorous:</strong> Prospective baseline year (2026) enables pre/post and ASC vs. pre-ASC comparisons — strengthening QI reporting and future publication</li>
+          <li><strong>Scalable:</strong> Orthopedic pilot with clear expansion pathway to general surgery, spine, and other high-volume elective service lines</li>
+          <li><strong>Academically enriching:</strong> Baseline data collection, metric design, and Epic infrastructure built during observation year</li>
+        </ul>
+        <div class="divider"></div>
+        <p style="font-weight:700; color:var(--navy);">Implementation Timeline:</p>
+        <div class="phase-list">
+          <div class="phase-item">
+            <div class="phase-dot t" style="font-size:0.11in;">&#10003;</div>
+            <div>
+              <div class="phase-title">2025–2026 — Proposal &amp; ASC Launch</div>
+              <div class="phase-desc">PSH framework developed; ASC operational; leadership engagement and steering committee formation initiated</div>
+            </div>
+          </div>
+          <div class="phase-item">
+            <div class="phase-dot b" style="font-size:0.11in;">NOW</div>
+            <div>
+              <div class="phase-title">2026 — Baseline Observation Year</div>
+              <div class="phase-desc">Prospective capture of ASC surgical outcomes without PSH intervention; Epic SmartForm and metric infrastructure built; pre-ASC comparator data extracted; staff training and protocol finalization</div>
+            </div>
+          </div>
+          <div class="phase-item">
+            <div class="phase-dot g" style="font-size:0.09in;">2027</div>
+            <div>
+              <div class="phase-title">2027 — PSH Pilot Launch (ASC First Anniversary)</div>
+              <div class="phase-desc">First cohort enrollment at one year post-ASC opening; outcomes compared against 2026 baseline and pre-ASC historical controls; quarterly review cycle begins</div>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <p style="font-size:0.13in; color:var(--muted);"><strong style="color:var(--navy);">Disclosures:</strong> No conflicts of interest. No external funding. Developed as a resident-led QI initiative in collaboration with the Guthrie Lourdes Department of Orthopedic Surgery.</p>
+
+        <div class="divider"></div>
+        <p style="font-weight:700; color:var(--navy); font-size:0.155in; flex-shrink:0;">Stakeholder Benefits at a Glance</p>
+
+        <svg viewBox="0 0 620 220" width="100%" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+
+          <!-- Patients -->
+          <rect x="2" y="2" width="146" height="214" rx="10" fill="#0D2B4E" opacity="0.07"/>
+          <rect x="2" y="2" width="146" height="214" rx="10" fill="none" stroke="#0D2B4E" stroke-width="1.5"/>
+          <rect x="2" y="2" width="146" height="34" rx="10" fill="#0D2B4E"/>
+          <rect x="2" y="26" width="146" height="10" fill="#0D2B4E"/>
+          <text x="75" y="23" text-anchor="middle" fill="white" font-size="11" font-weight="700" font-family="sans-serif">PATIENTS</text>
+          <text x="14" y="55" fill="#0D2B4E" font-size="10.5" font-family="sans-serif">- Fewer complications</text>
+          <text x="14" y="72" fill="#0D2B4E" font-size="10.5" font-family="sans-serif">- Safer recovery</text>
+          <text x="14" y="89" fill="#0D2B4E" font-size="10.5" font-family="sans-serif">- Earlier mobilization</text>
+          <text x="14" y="106" fill="#0D2B4E" font-size="10.5" font-family="sans-serif">- Reduced opioid use</text>
+          <text x="14" y="123" fill="#0D2B4E" font-size="10.5" font-family="sans-serif">- Fewer cancellations</text>
+          <text x="14" y="140" fill="#0D2B4E" font-size="10.5" font-family="sans-serif">- Coordinated PCP</text>
+          <text x="14" y="155" fill="#0D2B4E" font-size="10.5" font-family="sans-serif">   handoff</text>
+          <text x="14" y="172" fill="#0D2B4E" font-size="10.5" font-family="sans-serif">- Informed consent</text>
+          <text x="14" y="189" fill="#0D2B4E" font-size="10.5" font-family="sans-serif">   &amp; shared decisions</text>
+
+          <!-- Surgeons -->
+          <rect x="158" y="2" width="146" height="214" rx="10" fill="#1A5276" opacity="0.07"/>
+          <rect x="158" y="2" width="146" height="214" rx="10" fill="none" stroke="#1A5276" stroke-width="1.5"/>
+          <rect x="158" y="2" width="146" height="34" rx="10" fill="#1A5276"/>
+          <rect x="158" y="26" width="146" height="10" fill="#1A5276"/>
+          <text x="231" y="23" text-anchor="middle" fill="white" font-size="11" font-weight="700" font-family="sans-serif">SURGEONS</text>
+          <text x="170" y="55" fill="#1A5276" font-size="10.5" font-family="sans-serif">- Fewer cancellations</text>
+          <text x="170" y="72" fill="#1A5276" font-size="10.5" font-family="sans-serif">- Optimized patients</text>
+          <text x="170" y="89" fill="#1A5276" font-size="10.5" font-family="sans-serif">- Streamlined OR flow</text>
+          <text x="170" y="106" fill="#1A5276" font-size="10.5" font-family="sans-serif">- Reduced SSI &amp; VTE</text>
+          <text x="170" y="123" fill="#1A5276" font-size="10.5" font-family="sans-serif">- Better outcomes data</text>
+          <text x="170" y="140" fill="#1A5276" font-size="10.5" font-family="sans-serif">- Shared decision</text>
+          <text x="170" y="155" fill="#1A5276" font-size="10.5" font-family="sans-serif">   support tools</text>
+          <text x="170" y="172" fill="#1A5276" font-size="10.5" font-family="sans-serif">- Improved patient</text>
+          <text x="170" y="187" fill="#1A5276" font-size="10.5" font-family="sans-serif">   satisfaction scores</text>
+
+          <!-- Hospital -->
+          <rect x="314" y="2" width="146" height="214" rx="10" fill="#1A7E8E" opacity="0.07"/>
+          <rect x="314" y="2" width="146" height="214" rx="10" fill="none" stroke="#1A7E8E" stroke-width="1.5"/>
+          <rect x="314" y="2" width="146" height="34" rx="10" fill="#1A7E8E"/>
+          <rect x="314" y="26" width="146" height="10" fill="#1A7E8E"/>
+          <text x="387" y="23" text-anchor="middle" fill="white" font-size="11" font-weight="700" font-family="sans-serif">INSTITUTION</text>
+          <text x="326" y="55" fill="#1A5276" font-size="10.5" font-family="sans-serif">✓ $3.5–5.4M savings</text>
+          <text x="326" y="72" fill="#1A5276" font-size="10.5" font-family="sans-serif">✓ Improved OR efficiency</text>
+          <text x="326" y="89" fill="#1A5276" font-size="10.5" font-family="sans-serif">✓ Lower readmissions</text>
+          <text x="326" y="106" fill="#1A5276" font-size="10.5" font-family="sans-serif">✓ Value-based care</text>
+          <text x="326" y="121" fill="#1A5276" font-size="10.5" font-family="sans-serif">   alignment</text>
+          <text x="326" y="138" fill="#1A5276" font-size="10.5" font-family="sans-serif">✓ Regional quality</text>
+          <text x="326" y="153" fill="#1A5276" font-size="10.5" font-family="sans-serif">   leadership</text>
+          <text x="326" y="170" fill="#1A5276" font-size="10.5" font-family="sans-serif">✓ Scalable to other</text>
+          <text x="326" y="185" fill="#1A5276" font-size="10.5" font-family="sans-serif">   service lines</text>
+
+          <!-- Trainees -->
+          <rect x="470" y="2" width="146" height="214" rx="10" fill="#C8932A" opacity="0.07"/>
+          <rect x="470" y="2" width="146" height="214" rx="10" fill="none" stroke="#C8932A" stroke-width="1.5"/>
+          <rect x="470" y="2" width="146" height="34" rx="10" fill="#C8932A"/>
+          <rect x="470" y="26" width="146" height="10" fill="#C8932A"/>
+          <text x="543" y="23" text-anchor="middle" fill="white" font-size="11" font-weight="700" font-family="sans-serif">TRAINEES</text>
+          <text x="482" y="55" fill="#8B6014" font-size="10.5" font-family="sans-serif">✓ QI project platform</text>
+          <text x="482" y="72" fill="#8B6014" font-size="10.5" font-family="sans-serif">✓ Outcomes research</text>
+          <text x="482" y="89" fill="#8B6014" font-size="10.5" font-family="sans-serif">✓ Publication pipeline</text>
+          <text x="482" y="106" fill="#8B6014" font-size="10.5" font-family="sans-serif">✓ Periop medicine</text>
+          <text x="482" y="121" fill="#8B6014" font-size="10.5" font-family="sans-serif">   competency</text>
+          <text x="482" y="138" fill="#8B6014" font-size="10.5" font-family="sans-serif">✓ Cross-disciplinary</text>
+          <text x="482" y="153" fill="#8B6014" font-size="10.5" font-family="sans-serif">   collaboration</text>
+          <text x="482" y="170" fill="#8B6014" font-size="10.5" font-family="sans-serif">✓ Conference &amp;</text>
+          <text x="482" y="185" fill="#8B6014" font-size="10.5" font-family="sans-serif">   presentation roles</text>
+        </svg>
+      </div>
+    </div>
+
+  </div><!-- /body -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>
+      <strong>References:</strong>
+      Healy MA et al. JAMA Surgery 2016;151(9):823–830 &nbsp;·&nbsp;
+      Thompson A et al. Circulation 2024 &nbsp;·&nbsp;
+      Chung F et al. Anesthesiology 2008 &nbsp;·&nbsp;
+      Shohat N et al. Bone Joint J 2019 &nbsp;·&nbsp;
+      DiMagno AN et al. J Orthop Surg (Hong Kong). 2020;28(3):2309499020916129 &nbsp;·&nbsp;
+      Kim CW et al. Knee Surg Relat Res. 2020;32:12 &nbsp;·&nbsp;
+      Nham FH et al. Arthroplasty. 2023;5(1):18 &nbsp;·&nbsp;
+      Zietlow KE et al. Am J Med. 2022;135(1):39–48 &nbsp;·&nbsp;
+      2022 ICM-VTE Guidelines &nbsp;·&nbsp;
+      AAHKS/AAOS/ASRA TXA Consensus &nbsp;·&nbsp;
+      UK JBDS Perioperative Diabetes Guidelines
+    </div>
+    <div style="color:rgba(255,255,255,0.45);">Guthrie Lourdes Hospital &nbsp;·&nbsp; Research Day 2026 &nbsp;·&nbsp; QI Poster</div>
+  </div>
+
+</div>
+</body>
+</html>
